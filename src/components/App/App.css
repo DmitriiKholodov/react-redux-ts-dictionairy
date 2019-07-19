@@ -1,7 +1,8 @@
 .App {
+  box-sizing: border-box;
   text-align: center;
   background-color: orange;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
 }

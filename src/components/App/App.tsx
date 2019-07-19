@@ -3,6 +3,8 @@ import './App.css';
 import store from "../../store";
 import {changeTitle} from "../../actions/actions"
 import {connect}  from "react-redux";
+// import {getAuthToken} from "../../requests";
+import MainLayout from '../MainLayout';
 
 interface IAppProps {
   test: boolean
@@ -13,9 +15,10 @@ const firstDispatch: any = () => {
 };
 
 const App: React.FC<IAppProps> = ( props ) => {
+
   return (
-    <div className="App">
-          <h1 onClick={()=>firstDispatch()}>click for dispatch -> {store.getState().title}</h1>
+    <div style={{padding: '20px', display: 'flex', flexFlow: 'column', justifyContent: 'space-between'}} className="App">
+      <MainLayout />
     </div>
   );
 };
